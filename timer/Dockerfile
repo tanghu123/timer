@@ -5,4 +5,4 @@ run mkdir -p /opt/timer
 
 COPY ./timer/target/*.jar /opt/timer/
 COPY ./timer/startup.sh /opt/timer/
-run chmod 755 /opt/timer /opt/timer/startup.sh
+run chmod 777 /opt/timer /opt/timer/startup.sh
