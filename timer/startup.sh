@@ -1,4 +1,4 @@
 #!/bin/bash
-FILE=$(find . -name timer-*.jar)
+FILE=$(find /var -name timer-*.jar)
 #echo $FILE
 java -jar $FILE
