@@ -1,6 +1,8 @@
 # Runner container
 FROM vip-proxy.vip:5000/java
 
-COPY ./timer/target/*.jar /var/
-COPY ./timer/startup.sh /var/
-run chmod 755 /var/startup.sh /var
+run mkdir -P /opt/timer
+
+COPY ./timer/target/*.jar /opt/timer/
+COPY ./timer/startup.sh /opt/timer/
+run chmod 755 /opt/timer /opt/timer/startup.sh
