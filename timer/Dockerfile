@@ -4,6 +4,5 @@ FROM vip-proxy.vip:5000/centos/openjdk8
 run mkdir -p /opt/timer
 
 COPY ./timer/target/*.jar /opt/timer/
-COPY ./timer/startup.sh /opt/timer/
-run chmod 755 /opt/timer /opt/timer/startup.sh
-CMD /opt/timer/startup.sh
+ENV jarfile $(find /opt/timer -name timer-*.jar)
+CMD java -jar $jarfile
