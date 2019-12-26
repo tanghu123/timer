@@ -6,3 +6,5 @@ run mkdir -p /opt/timer
 COPY ./timer/target/*.jar /opt/timer/
 COPY ./timer/startup.sh /opt/timer/
 run chmod 777 /opt/timer /opt/timer/startup.sh
+ENV jarfile = $(find /opt/timer -name timer-*.jar)
+ENTRYPOINT ["java","-jar","$jarfile"]
