@@ -1,7 +1,7 @@
 # Runner container
 FROM vip-proxy.vip:5000/java
 
-run mkdir -P /opt/timer
+run mkdir -p /opt/timer
 
 COPY ./timer/target/*.jar /opt/timer/
 COPY ./timer/startup.sh /opt/timer/
