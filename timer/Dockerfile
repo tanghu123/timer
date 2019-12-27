@@ -3,5 +3,6 @@ FROM vip-proxy.vip:5000/centos/openjdk8
 
 run mkdir -p /opt/timer
 
-COPY ./timer/target/*.jar /opt/timer/
-CMD java -jar $jarfile
+ARG JAR_FILE
+ADD target/${JAR_FILE} /opt/timer/${JAR_FILE}
+ENTRYPOINT ["/usr/bin/java", "-jar", "/opt/timer/${JAR_FILE}"]
