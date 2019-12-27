@@ -11,7 +11,7 @@ public class TimerApplication {
 	
 	@RequestMapping("/")
     String home() {
-        return "Hello K8S!";
+        return "Hello K8S! 666";
     }
 
 	public static void main(String[] args) {
