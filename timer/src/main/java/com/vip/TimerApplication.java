@@ -13,7 +13,7 @@ public class TimerApplication {
 	
 	@RequestMapping("/")
     String home() {
-        return "Hello K8S! The Container time is " + LocalDateTime.now();
+        return "1r324r34 Hello K8S! The Container time is " + LocalDateTime.now();
     }
 
 	public static void main(String[] args) {
